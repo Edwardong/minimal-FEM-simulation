@@ -39,7 +39,8 @@ if __name__ == "__main__":
         filename = render(def_X, Tetras, F, shape, os.path.join('out', str(step)))
 
         filenames.append(filename)
-
+    if not os.path.exists('out'):
+        os.makedirs('out')
     make_video(filenames)
 
 
