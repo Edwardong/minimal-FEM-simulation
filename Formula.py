@@ -6,8 +6,8 @@ from numpy.linalg import inv, det
 from Operator import add
 
 
-MU = 1
-LAMBDA = 1
+MU = 0.1785
+LAMBDA = 0.7141
 GAMMA = 1
 DELTA_TIME = 1
 MASS = 100

@@ -13,7 +13,7 @@ if __name__ == "__main__":
     #     def_xs: Deformed configuration. Same structure.
     # tetras: array[][node#, 4]
     #     tetras: Tetrahedral mesh. Each element correspond to a tetrahedral, and is a 4-element array that stores the INDEX of the nodes (in X) of the tetrahedral.
-    ref_X, Tetras, shape = load_single()
+    ref_X, Tetras, shape = load_obj()
     print(len(ref_X), " nodes.")
     print(len(Tetras), " tetrahedrals.")
     # verify_volume(ref_X, Tetras) # for debug
@@ -21,7 +21,8 @@ if __name__ == "__main__":
     def_X = deform(ref_X)
     # render(ref_X, Tetras, shape=shape, filename='ref')
     # render(def_X, Tetras, shape=shape, filename='def')
-
+    print(ref_X)
+    print(Tetras)
     B, W = precompute(ref_X, Tetras)
     
     # Initialize velocities to 0
